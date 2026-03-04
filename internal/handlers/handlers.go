@@ -11,7 +11,7 @@ import (
 	"github.com/Yandex-Practicum/go1fl-sprint6-final/internal/service"
 )
 
-func htmlHandler(w http.ResponseWriter, r *http.Request) {
+func HtmlHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method not allowed"+r.Method, http.StatusMethodNotAllowed)
 		return
@@ -31,7 +31,7 @@ func htmlHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func uploadHandler(w http.ResponseWriter, r *http.Request) {
+func UploadHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed"+r.Method, http.StatusMethodNotAllowed)
 		return
